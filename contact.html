@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="cssdesign.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contect</title>
+
+    <script>
+        function save(){
+            var name = document.frm.name.value;
+            var surname = document.frm.surname.value;
+            var id = document.frm.id.value;
+            var email = document.frm.email.value;
+            var numbers = /^[0-9]+$/;
+
+            for(i=0;i<len;i++){
+			if (email.charAt(i)=='@') ima++
+		}
+
+            if(name.length() > 0){
+                if(surname.length() > 10){
+                    if(id.match(numbers)){
+                        if(ima == 1){
+                            
+                                alert("Success");
+                        
+                          //  localStorage.setItem()
+                        //document.getElementById("").innerHTML = localStorage.getItem(); ---I didnt have time to store it...
+                        }else{
+                            alert("Enter a valid email");
+                        }
+                    }else{
+                        alert("ID must be only numbers")
+                    }
+                }else{
+                    alert("String length must be more than 10")
+                }
+            }else{
+                alert("Enter name")
+            }
+
+        }
+    </script>
+
+</head>
+<body>
+    <div class="nav-bar">
+        <nav>
+             <ul class="navlinks">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contact.html"></a>Contact</li>
+            </ul>
+        
+    </div>
+</nav>
+
+        
+        <div class="header">    
+            <embed src="header.swf"></embed>
+        </div> 
+
+        <form action="action=#" id="frm" name="frm"  onSubmit="return save(this)"></form>
+        <table  border="1" class="tableleft" align="center" width="700">
+            <tr>
+                <td>Surname: </td>
+                <td><input type="text" name="surname" id="surname"></td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>Student ID:</td>
+                <td><input type="text" name="id" id="id"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr><td>Text:</td>
+            <td><textarea class="textarea" name="text" id="" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td  colspan="2" td class="tdart" align="center">
+                <br>
+                    <input type="submit"  class="button" value="SUBMIT" >
+                    
+                </td>
+            </tr>
+        </table>
+    
+</body>
+</html>

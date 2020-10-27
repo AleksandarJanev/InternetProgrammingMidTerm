@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="cssdesign.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+
+    <script>
+
+        var name = document.frm.name.value;
+        var surname = document.frm.surname.value;
+        function check(){
+            if(document.getElementById("correct1").value  == 'TRUE'){
+                if(document.getElementById("correct2").value  == 'TRUE'){
+                    if(document.getElementById("correct3").value == 'TRUE'){
+                        alert("Answers are correct");
+                    }else{
+                        alert("Incorrect answers");
+                    }
+                }else{
+                    alert("Incorrect answers");
+                }
+            }else{
+                alert("Incorrect answers");
+            }
+        }
+
+    </script>
+
+
+</head>
+<body>
+    <div class="header">    
+        <embed src="header.swf"></embed>
+    </div> 
+
+    <div class="nav-bar">
+        <nav>
+             <ul class="navlinks">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="contact.html"></a>Contact</li>
+            </ul>
+        
+    </div>
+</nav>
+
+        
+        <div id="logo-box">
+            <header>
+                <img src="header.gif" alt="">
+            </header>
+        </div>
+
+<form action="#" id="frm" name="frm"  onSubmit="return check(this)">
+    <table border="1" class="tableleft" align="center" width="700">
+        <tr>
+            <td>Name: </td>
+            <td><input type="text" name="name" id="name"></td>
+        </tr>
+        <tr>
+            <td>Surname: </td>
+            <td><input type="text" name="surname" id="surname"></td>
+        </tr>
+        <tr colspan="2">
+            <td id="1">Inside which HTML element do we put the JavaScript (choose one)</td>
+            <td>
+                <input type="checkbox" name="scripting" id="scripting"> scripting
+                <br>
+                <input type="checkbox" name="js" id="js"> js
+                <br>
+                <input type="checkbox" name="javascript" id="javascript"> javascript
+                <br>
+                <input type="checkbox" name="correct1" id="correct1"> script
+            </td>
+        </tr>
+        <tr colspan="2">
+            <td id="2">The external JavaScript file must contain the script tag (check all that apply)</td>
+            <td>
+                <input type="checkbox" name="correct2" id="correct2"> true
+                <br>
+                <input type="checkbox" name="false" id="false"> false
+                <br>
+                <input type="checkbox" name="both" id="both"> both
+                <br>
+                <input type="checkbox" name="none" id="none"> none
+            </td>
+        </tr>
+        <tr colspan="2">
+            <td id="3">How do you write "Hello World" in an alert box? (select option)</td>
+            <td>
+                <input type="checkbox" name="correct3" id="correct3"> Alert(“Hello World”);
+                <br>
+                <input type="checkbox" name="alertBox" id="alertBox"> alertBox(“Hello World”);
+                <br>
+                <input type="checkbox" name="msg" id="msg"> msg(“Hello World”);
+                <br>
+                <input type="checkbox" name="msgboxl" id="msgboxl"> msgBoxl(“Hello World”);
+            </td>
+        </tr>
+        <tr>
+			<td  colspan="2" td class="tdart" align="center">
+			<br>
+				<input type="submit"  class="button" value="SUBMIT" >
+				
+			</td>
+        </tr>
+
+    </table>
+</form>
+
+</body>
+</html>
